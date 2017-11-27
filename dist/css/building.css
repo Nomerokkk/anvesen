@@ -1,0 +1,70 @@
+.building .our-work,
+.building .anvessen-this {
+  background-color: #ededed;
+}
+
+.get-home {
+  padding: 50px 0;
+  -webkit-background-size: cover;
+  background-size: cover;
+  background-image: url(../img/get-home.jpg);
+  text-align: center;
+  color: #fff;
+}
+
+.get-home .wrapper {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.get-home__title {
+  font-size: 30px;
+  text-transform: uppercase;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1 0 100%;
+      -ms-flex: 1 0 100%;
+          flex: 1 0 100%;
+}
+
+@media all and (max-width: 767px) {
+  .get-home__title {
+    font-size: 24px;
+  }
+}
+
+.get-home__desc {
+  font-size: 18px;
+  font-weight: 300;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1 0 100%;
+      -ms-flex: 1 0 100%;
+          flex: 1 0 100%;
+  margin: 20px 0;
+}
+
+.get-home__number {
+  font-size: 30px;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1 0 100%;
+      -ms-flex: 1 0 100%;
+          flex: 1 0 100%;
+}
+
+.get-home__call-us {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1 0 100%;
+      -ms-flex: 1 0 100%;
+          flex: 1 0 100%;
+  margin: 20px 0;
+  font-size: 18px;
+  font-weight: 300;
+}

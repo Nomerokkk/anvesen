@@ -1,0 +1,96 @@
+@import '_vars';
+
+.reviews {
+  padding: 50px 0;
+  &__slider {
+    max-width: 1000px;
+    margin: 0 auto 30px;
+    padding: 0 30px;
+  }
+  &__adres {
+    color: #999;
+    font: 300 14px/24px $font;
+  }
+  .slick-list {
+    padding: 30px 0 0;
+  }
+  &__item {
+    display: flex !important;
+    padding: 0 15px;
+    font-size: 14px;
+    line-height: 24px;
+    @media all and (max-width: 767px) {
+      flex-wrap: wrap;
+    }
+  }
+  &__img {
+    margin-right: 30px;
+    position: relative;
+    @media all and (max-width: 767px) {
+      flex: 1 0 100%;
+      text-align: center;
+    }
+    img {
+      @media all and (max-width: 767px) {
+        display: inline-block;
+      }
+    }
+    &::before {
+      content: url(#{$imgPath}reviews-img.png);
+      position: absolute;
+      right: -15px;
+      top: -15px;
+    }
+  }
+  &__desc {
+    flex: 3 0 60%;
+    display: flex;
+    flex-wrap: wrap;
+    font-weight: 300;
+    @media all and (max-width: 767px) {
+      flex: 1 0 100%;
+    }
+  }
+  &__nav {
+    width: 100%;
+    display: flex;
+    align-content: flex-end;
+    justify-content: space-between;
+    font-weight: 500;
+    align-items: flex-end;
+  }
+  &__read {
+    color: $placeholder;
+    font-weight: 300;
+    text-decoration: underline;
+  }
+  .arrows__next {
+    right: - 30px;
+    @media all and (max-width: 1023px) {
+      right: -10px;
+    }
+  }
+  .arrows__prev {
+    left: -30px;
+    @media all and (max-width: 1023px) {
+      left: -10px;
+    }
+  }
+  &__full {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    .reviews__item {
+      flex: 0 0 42%;
+      margin-bottom: 50px;
+      @media all and (max-width: 1200px) {
+        flex: 0 0 50%;
+      }
+      @media all and (max-width: 988px) {
+        flex: 0 0 100%;
+        padding-left: 0;
+        padding-right: 0;
+      }
+    }
+  }
+}

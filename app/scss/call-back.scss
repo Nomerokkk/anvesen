@@ -1,0 +1,47 @@
+@import '_vars';
+
+.call-back {
+  padding: 50px 0;
+  background-image: url(#{$imgPath}call-back.jpg);
+  color: #fff;
+  -webkit-background-size: cover;
+  background-size: cover;
+  &__form {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+  &__input {
+    flex: 0 0 19%;
+    background: none;
+    font-size: 14px;
+    font-weight: 300;
+    color: #fff;
+    margin: 0 10px;
+    @media all and (max-width: 767px) {
+      flex: 0 0 100%;
+      margin: 0 0 15px;
+    }
+    &::placeholder {
+      color: #fff;
+    }
+  }
+  &__button {
+    flex: 0 0 19%;
+    margin: 0 10px;
+    height: 42px;
+    @media all and (max-width: 767px) {
+      flex: 0 0 100%;
+      margin: 0 0 15px;
+    }
+  }
+  &__desc {
+    flex: 0 0 37%;
+    font: 400 16px/28px $font;
+    @media all and (max-width: 767px) {
+      flex: 0 0 100%;
+      margin-bottom: 15px;
+      text-align: center;
+    }
+  }
+}

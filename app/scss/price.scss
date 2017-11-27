@@ -1,0 +1,128 @@
+@import "_vars";
+
+.price {
+  padding: 50px 0;
+  &__desc {
+    font: 300 18px/30px $font;
+    text-align: center;
+  }
+  &__table {
+    margin-top: 30px;
+  }
+  &__row {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    &--head {
+      .price__cell {
+        color: #fff;
+        font: 500 14px/24px $font;
+        text-transform: uppercase;
+        @media screen and (max-width: 767px) {
+          font: 500 10px/10px $font;
+        }
+        span {
+          color: $orange;
+          display: block;
+        }
+      }
+      .price__bg {
+        background: $grey;
+      }
+    }
+  }
+  &__cell {
+    padding: 9px;
+    flex: 0 0 12%;
+    @media screen and (max-width: 767px) {
+      padding: 1px;
+    }
+    &-data {
+      display: flex;
+      align-items: stretch;
+      @media screen and (max-width: 767px) {
+        flex-wrap: wrap;
+      }
+    }
+    &--long {
+      flex: 0 0 50%;
+      @media screen and (max-width: 767px) {
+        flex: 0 0 40%;
+      }
+    }
+  }
+  &__bg {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 5px;
+    span {
+      flex: 0 0 100%;
+      text-align: center;
+    }
+    &-cell {
+      display: flex;
+      align-items: stretch;
+      padding: 5px;
+      flex-wrap: wrap;
+      text-align: center;
+      font-size: 14px;
+      font-weight: 500;
+      text-transform: uppercase;
+      &:first-child {
+        padding-left: 0 !important;
+        flex: 0 0 30%;
+        @media screen and (max-width: 767px) {
+          padding-right: 0;
+          flex: 0 0 100%;
+        }
+      }
+      &:last-child {
+        padding-right: 0 !important;
+        flex: 0 0 70%;
+        text-align: left;
+        @media screen and (max-width: 767px) {
+          padding-left: 0;
+          flex: 0 0 100%;
+        }
+      }
+      .bg-cell {
+        background: $lightGrey;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 20px;
+        width: 100%;
+        @media screen and (max-width: 767px) {
+          padding: 5px;
+          width: 100%;
+        }
+      }
+    }
+    &-row {
+      flex: 0 0 100%;
+      background: $lightGrey;
+      font-size: 13px;
+      font-weight: 300;
+      text-transform: none;
+      &:first-child {
+        margin-bottom: 5px;
+      }
+      &:last-child {
+        margin-top: 5px;
+      }
+    }
+  }
+  &__plus {
+    font-size: 30px;
+    border-radius: 50%;
+    display: inline-block;
+    color: #fff;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+  }
+}

@@ -1,0 +1,267 @@
+@import '_vars';
+
+.news {
+  padding: 50px 0;
+  .wrapper-new {
+    display: flex;
+    @media all and (max-width: 767px) {
+      flex-wrap: wrap;
+    }
+    img {
+      max-width: 100%;
+    }
+  }
+  &__main {
+    flex: 0 0 65%;
+    padding: 0 30px 0 0;
+    font: 300 15px/24px $font;
+    @media all and (max-width: 1023px) {
+      padding: 0 15px 0 0;
+      width: 65%;
+    }
+    @media all and (max-width: 767px) {
+      flex: 0 0 100%;
+      padding: 0;
+      width: 100%;
+    }
+  }
+  &__text {
+    h2 {
+      font-weight: 500;
+      font-size: 15px;
+      text-transform: uppercase;
+      margin: 30px 0;
+    }
+    ul {
+      li {
+        &::before {
+          content: '';
+          width: 10px;
+          height: 10px;
+          background-color: $orange;
+          display: inline-block;
+          margin-right: 15px;
+          margin-bottom: 5px;
+          vertical-align: middle;
+        }
+      }
+    }
+  }
+  &__sidebar {
+    flex: 0 0 35%;
+    padding: 0 15px 0 40px;
+    @media all and (max-width: 1023px) {
+      padding: 0 0 0 15px;
+    }
+    @media all and (max-width: 767px) {
+      flex: 0 0 100%;
+      padding: 0;
+    }
+  }
+  &__nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 0;
+    border-bottom: 1px solid $lightGrey;
+  }
+  &-item__nav {
+    li {
+      margin-left: 10px;
+    }
+  }
+  &__cat {
+    a {
+      color: $orange;
+    }
+  }
+  &__nav-bottom {
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid $lightGrey;
+    padding: 30px 0;
+    margin-top: 30px;
+    li {
+      &::before {
+        content: none !important;
+      }
+    }
+  }
+  &__tags {
+    li {
+      display: inline-block;
+      vertical-align: middle;
+      margin-right: 10px;
+      &:first-child {
+        font-weight: bold;
+      }
+      a {
+        color: $placeholder;
+        &:hover {
+          color: $orange;
+        }
+      }
+    }
+  }
+  &__social {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    li {
+      margin-left: 15px;
+      a {
+        width: 38px;
+        height: 38px;
+        color: $placeholder;
+        border: 1px solid $placeholder;
+        font-size: 18px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        &:hover {
+          border: 1px solid $orange;
+          color: $orange;
+        }
+      }
+    }
+  }
+  &__mail {
+    background-image: url(#{$imgPath}subscribe-bg.jpg);
+    -webkit-background-size: cover;
+    background-size: cover;
+    padding: 60px 68px;
+    color: #fff;
+    @media all and (max-width: 1023px) {
+      padding: 50px 15px;
+    }
+    @media all and (max-width: 767px) {
+      text-align: center;
+    }
+    &-title {
+      font: 500 16px/28px $font;
+      text-align: center;
+      text-transform: uppercase;
+      &::before {
+        content: url(#{$imgPath}mail.png);
+        display: block;
+        margin-bottom: 15px;
+      }
+    }
+    form {
+      display: flex;
+      flex-wrap: wrap;
+      @media all and (max-width: 767px) {
+        justify-content: center;
+      }
+    }
+    &-input {
+      flex: 0 0 60%;
+      background: none;
+      color: #fff;
+      border-color: $placeholder;
+      margin-right: 10px;
+      @media all and (max-width: 767px) {
+        flex: 0 0 100%;
+        margin-right: 0;
+        margin-bottom: 0;
+      }
+      &::placeholder {
+        color: #fff;
+      }
+    }
+    &-desc {
+      font: 300 14px/28px $font;
+      text-align: center;
+    }
+    .button {
+      flex: 0 0 37%;
+    }
+  }
+  &__sidebar {
+    @media all and (max-width: 767px) {
+      margin-top: 50px;
+    }
+    &-title {
+      font: 500 18px/26px $font;
+      padding-bottom: 12px;
+      border-bottom: 1px solid #aaaaaa;
+      position: relative;
+      margin-bottom: 20px;
+      &::after {
+        width: 30px;
+        height: 5px;
+        background: $orange;
+        content: '';
+        position: absolute;
+        bottom: -2.5px;
+        left: 0;
+      }
+    }
+    &-list {
+      li {
+        margin-bottom: 15px;
+        font-weight: 300;
+        font-size: 14px;
+        &::before {
+          content: url(#{$imgPath}sidebar-list.png);
+          margin-right: 15px;
+        }
+        &:hover {
+          font-weight: 500;
+          a {
+            color: $grey;
+          }
+          &::before {
+            content: url(#{$imgPath}sidebar-list-hover.png);
+          }
+        }
+      }
+    }
+    &-cat {
+      margin-top: 32px;
+      font-size: 14px;
+      a {
+        color: $orange;
+        font-weight: 300;
+      }
+    }
+    &-new-title {
+      font-weight: bold;
+      margin: 25px 0;
+    }
+    .news-item__nav {
+      justify-content: flex-start;
+      padding: 0;
+    }
+    &-item {
+      padding-bottom: 30px;
+      border-bottom: 1px solid $lightGrey;
+    }
+    &-form {
+      background-image: url(#{$imgPath}bg-sidebar.jpg);
+      padding: 30px;
+      color: #fff;
+      margin-top: 60px;
+      -webkit-background-size: cover;
+      background-size: cover;
+      &-title {
+        font: bold 16px/30px $font;
+        text-align: center;
+        text-transform: uppercase;
+      }
+      .button {
+        width:100%;
+        @media all and (max-width: 767px) {
+          margin-top: 0;
+        }
+      }
+    }
+    &-input {
+      width: 100%;
+      background: none;
+      color: #fff;
+      &::placeholder {
+        color: #fff;
+      }
+    }
+  }
+}

@@ -1,0 +1,41 @@
+@import '_vars';
+
+.our-prof-line {
+  background-image: url(#{$imgPath}our-prof-bg.jpg);
+  background-size: cover;
+  color: #fff;
+  padding: 50px 0;
+  &__title {
+    font-size: 30px;
+    text-align: center;
+    text-transform: uppercase;
+    @media all and (max-width: 767px) {
+      font-size: 24px;
+    }
+  }
+  &__wrapper {
+    display: flex;
+    font-size: 18px;
+    color: #fff;
+    width: 100%;
+    justify-content: space-between;
+    max-width: 800px;
+    margin: 30px auto 0;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  &__item {
+    flex: 2 0 70%;
+    font: 300 18px/28px $font;
+    @media all and (max-width: 767px) {
+      flex: 1 0 100%;
+    }
+  }
+  button {
+    flex: 1 0 30%;
+    @media all and (max-width: 767px) {
+      flex: 1 0 100%;
+      margin-top: 15px;
+    }
+  }
+}

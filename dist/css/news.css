@@ -1,0 +1,104 @@
+.news-all__wrapper {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+}
+
+.news-all__item {
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 0 50%;
+      -ms-flex: 0 0 50%;
+          flex: 0 0 50%;
+}
+
+@media all and (max-width: 767px) {
+  .news-all__item {
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 0 100%;
+        -ms-flex: 0 0 100%;
+            flex: 0 0 100%;
+    padding: 0px;
+  }
+}
+
+.news-all__item .news-item {
+  border: 1px solid #ededed;
+  margin-bottom: 30px;
+}
+
+.news-all__item:first-child {
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 0 100%;
+      -ms-flex: 0 0 100%;
+          flex: 0 0 100%;
+  text-align: left;
+}
+
+.news-all__item:first-child .news-item__cat {
+  margin: 15px 0 15px 10px;
+  text-align: left;
+}
+
+.news-all__item:first-child .news-item__nav {
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  padding: 0;
+}
+
+.news-all__item:first-child .news-item__title {
+  margin-bottom: 20px;
+  margin-left: 10px;
+  text-align: left;
+}
+
+@media all and (max-width: 767px) {
+  .news-all__item .news-item__nav {
+    padding: 0px 15px;
+  }
+}
+
+.news-all__item .news-item__title a {
+  display: inline-block;
+}
+
+.news-all__item .news-item__title {
+  margin-bottom: 20px;
+}
+
+.pagination {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+}
+
+.pagination li {
+  margin: 8px;
+}
+
+.pagination li a {
+  display: block;
+  padding: 8px 15px;
+  border: 1px solid #333333;
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 20px;
+}
+
+.pagination li a:hover {
+  border: 1px solid #399923;
+  color: #399923;
+}

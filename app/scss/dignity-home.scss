@@ -1,0 +1,32 @@
+@import "_vars";
+
+.dignity {
+  padding: 50px 0px;
+  &__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  &__item {
+    flex: 0 0 50%;
+    padding: 0 15px;
+    margin-bottom: 40px;
+    @media all and (max-width: 767px) {
+      flex: 0 0 100%;
+      padding: 0;
+    }
+  }
+  &__inner {
+    display: flex;
+  }
+  &__img {
+    flex: 0 0 68px;
+  }
+  &__title {
+    font: bold 14px/24px $font;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+  }
+  &__desc {
+    font: 300 14px/24px $font;
+  }
+}

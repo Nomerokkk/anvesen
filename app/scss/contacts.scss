@@ -1,0 +1,65 @@
+@import '_vars';
+
+.contacts {
+  padding: 50px 0;
+  font-size: 14px;
+  .wrapper {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  &__bl:first-child {
+    flex: 1 0 30%;
+  }
+  &__bl:last-child {
+    flex: 1 0 70%;
+    @media all and (max-width: 767px) {
+      margin-top: 40px;
+    }
+  }
+  &__title {
+    font-size: 16px;
+    font-weight: 500;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+  }
+  &__desc {
+    font-weight: 300;
+    line-height: 24px;
+    span {
+      font-weight: 500;
+    }
+  }
+  &__info {
+    margin-top: 20px;
+    li {
+      line-height: 24px;
+      margin: 10px 0;
+      display: flex;
+      align-items: flex-start;
+      font-weight: 300;
+      i {
+        width: 30px;
+        margin-top: 4px;
+        color: $orange;
+      }
+    }
+  }
+  &__form-top {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  &__input {
+    flex: 0 0 48%;
+    margin: 10px 0;
+  }
+  &__textarea {
+    width: 100%;
+    margin: 10px 0;
+  }
+}
+.map {
+  iframe {
+    width: 100%;
+  }
+}

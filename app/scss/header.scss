@@ -1,0 +1,238 @@
+@import "_vars";
+
+.header {
+  &__top {
+    background-color: $grey;
+    padding: 5px;
+    color: #fff;
+    font-size: 13px;
+    font-weight: 300;
+    padding: 10px 0;
+    .wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      @media all and (max-width: 767px) {
+        flex-wrap: wrap;
+      }
+    }
+  }
+  &__left-menu {
+    ul {
+      li {
+        float: left;
+        margin-right: 10px;
+        margin-bottom: 5px;
+        &::after {
+          content: '|';
+          margin-left: 10px;
+          color: $lightGrey;
+        }
+        &:last-child {
+          &::after {
+            content: none;
+          }
+        }
+      }
+    }
+  }
+  &__right-menu {
+    @media all and (max-width: 767px) {
+      margin-top: 15px;
+    }
+    ul {
+      li {
+        float: left;
+        margin-left: 25px;
+        white-space: nowrap;
+        margin-bottom: 5px;
+        @media all and (max-width: 767px) {
+          margin-left: 0;
+          margin-right: 15px;
+        }
+        i {
+          color: #999999;
+          margin-right: 3px;
+          width: 18px;
+        }
+      }
+    }
+  }
+  &__bottom {
+    padding: 20px 0;
+    .wrapper {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      @media all and (max-width: 767px) {
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+    }
+  }
+  &__number-button {
+    display: flex;
+    align-items: center;
+    @media all and (max-width: 767px) {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+  }
+  &__number {
+    font-size: 24px;
+    @media all and (max-width: 767px) {
+      margin-top: 20px;
+    }
+    &::before {
+      content: url(#{$imgPath}phone.png);
+      display: inline-block;
+      vertical-align: middle;
+      margin-right: 10px;
+    }
+  }
+  &__button {
+    margin-left: 50px;
+    @media all and (max-width: 767px) {
+      margin: 15px 15px 0;
+    }
+  }
+}
+
+.toggle-menu {
+  display: none;
+  @media all and (max-width: 767px) {
+    display: block;
+    font-size: 20px;
+    padding: 15px 0;
+  }
+}
+
+.global-menu {
+  background-color: $grey;
+  color: #fff;
+  &__mob {
+    @media all and (max-width: 767px) {
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      background: $grey;
+      top: 0;
+      left: 0;
+      z-index: 1000;
+      display: none;
+    }
+  }
+  &__close {
+    display: none;
+    @media all and (max-width: 767px) {
+      display: inline-block;
+      float: right;
+      margin: 10px 10px 0 0;
+      position: relative;
+      z-index: 10;
+      &::before {
+        content: url(#{$imgPath}close.png)
+      }
+    }
+  }
+  &__mob > ul {
+    display: flex;
+    justify-content: space-between;
+    @media all and (max-width: 767px) {
+      display: block;
+      margin-top: 40px;
+    }
+    > li {
+      position: relative;
+      &:hover {
+        .submenu {
+          @media all and (min-width: 768px) {
+            display: block;
+            z-index: 100;
+          }
+        }
+        span::before {
+          content: '';
+          width: 100%;
+          height: 5px;
+          background-color: #fff;
+          display: block;
+          position: absolute;
+          top: 0;
+          margin-top: -19px;
+          left: 50%;
+          transform: translateX(-50%);
+        }
+      }
+      &.has__submenu {
+        > .open-menu {
+          content: '+';
+          font-size: 20px;
+          margin-top: -4px;
+          position: absolute;
+          right: 10px;
+          top: 20px;
+          height: 30px;
+          width: 30px;
+          display: inline-block;
+          text-align: center;
+          display: none;
+          @media all and (max-width: 767px) {
+            display: block;
+          }
+          @media all and (min-width: 768px) {
+            ~ a {
+              &:after {
+                content: url(#{$imgPath}nav-ar.png);
+                margin-left: 10px;
+              }
+            }
+          }
+        }
+        &:hover {
+          .open-menu::before {
+            content: none;
+          }
+        }
+      }
+      > a {
+        display: block;
+        padding: 20px 30px;
+        font-size: 14px;
+        text-transform: uppercase;
+        span {
+          position: relative;
+        }
+      }
+      .submenu {
+        position: absolute;
+        top: 54px;
+        color: $grey;
+        border: 3px solid #999999;
+        box-shadow: 0 0 38px 0 rgba(0, 0, 0, .5);
+        display: none;
+        @media all and (max-width: 767px) {
+          position: relative;
+          top: 0;
+        }
+        li {
+          display: block;
+          width: 100%;
+          white-space: nowrap;
+          background: #fff;
+          a {
+            display: block;
+            padding: 15px 10px;
+            border-bottom: 1px solid #ededed;
+            font-weight: 500;
+            font-size: 14px;
+            &:hover {
+              background-color: $green;
+              color: #fff;
+            }
+          }
+        }
+      }
+    }
+  }
+}

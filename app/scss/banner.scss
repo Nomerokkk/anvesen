@@ -1,0 +1,83 @@
+@import "_vars";
+
+.banner {
+  color: #fff;
+  background: url(#{$imgPath}banner.jpg);
+  overflow: hidden;
+  text-align: center;
+  position: relative;
+  -webkit-background-size: cover;
+  background-size: cover;
+  .wrapper {
+    padding: 100px 0;
+    @media all and (max-width: 767px) {
+      padding: 30px 0;
+    }
+  }
+  &__item {
+    background-size: cover;
+  }
+  &--slider {
+    background: none;
+    .slick-dots {
+      position: absolute;
+      bottom: 50px;
+      text-align: center;
+      width: 100%;
+      @media all and (max-width: 767px) {
+        bottom: 20px;
+      }
+      li {
+        display: inline-block;
+        button {
+          display: none;
+        }
+        &:before {
+          content: '';
+          width: 16px;
+          height: 16px;
+          border: 1px solid #fff;
+          background: transparent;
+          display: block;
+          margin: 10px;
+          cursor: pointer;
+        }
+        &.slick-active {
+          &:before {
+            background: rgba(225, 225, 225, .5);
+          }
+        }
+      }
+    }
+  }
+  &__title {
+    text-transform: uppercase;
+    font: 400 40px/1.5 $font;
+    @media all and (max-width: 767px) {
+      font-size: 24px;
+    }
+  }
+  &__desc {
+    line-height: 2.5;
+    max-width: 700px;
+    margin: 0 auto 50px;
+    @media all and (max-width: 767px) {
+      line-height: 1.4;
+    }
+  }
+  &__btns {
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+    margin-bottom: 50px;
+    @media all and (max-width: 767px) {
+      flex-wrap: wrap;
+    }
+  }
+  &__button {
+    margin: 0 15px;
+    @media all and (max-width: 767px) {
+      margin-bottom: 15px;
+    }
+  }
+}

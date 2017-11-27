@@ -1,0 +1,132 @@
+@import '_vars';
+
+.modal {
+  max-width: 550px;
+  padding: 40px 90px;
+  display: none;
+  border: 5px solid rgba(145, 145, 145, .7);
+  @media all and (max-width: 767px) {
+    padding: 60px 15px 40px;
+  }
+  input {
+    width:100%;
+  }
+  .modal__input {
+    border: 1px solid $lightGrey;
+    width: 100%;
+    padding: 12px;
+    margin: 15px 0;
+    display: block;
+  }
+  &__title {
+    font-size: 18px;
+    text-align: center;
+    font-weight: 500;
+    text-transform: uppercase;
+  }
+  &__desc {
+    font-size: 14px;
+    text-align: center;
+    margin: 30px 0;
+    font-weight: 300;
+  }
+  &--review {
+    max-width: 810px;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 70px;
+    @media all and (max-width: 767px) {
+      padding-left: 15px;
+      padding-right: 15px;
+      .reviews__item {
+        padding-left: 0;
+        padding-right: 15px;
+      }
+    }
+    .reviews__nav {
+      flex-wrap: wrap;
+      * {
+        flex: 0 0 100%;
+      }
+    }
+  }
+}
+.fancybox-close-small {
+  background: $grey;
+  padding: 5px;
+  top: 10px;
+  right: 10px;
+  &::after {
+    content: url(#{$imgPath}close.png);
+    background: none !important;
+    top: 10px;
+    right: 7px;
+  }
+  &:hover {
+    background: $orange;
+  }
+}
+.modal-gallery {
+  background: #fff;
+  padding: 65px 30px 20px;
+  display: none;
+  @media all and (max-width: 767px) {
+    padding: 65px 15px 20px;
+    img {
+      max-width: 100%;
+    }
+  }
+  &__title {
+    font: 500 21px/24px $font;
+    margin-top: 20px;
+  }
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+    margin: 10px 0;
+    @media all and (max-width: 767px) {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+  }
+  &__desc {
+    font-size: 14px;
+    font-weight: 300;
+    @media all and (max-width: 767px) {
+      margin-bottom: 15px;
+    }
+    span {
+      font-weight: 500;
+    }
+  }
+  &-fancybox {
+    .fancybox-navigation button {
+      content: '';
+      background: none;
+      border: none;
+      cursor: pointer;
+      &::before {
+        background: none !important;
+      }
+    }
+    &__arrow-right {
+      right: 0;
+      @media all and (max-width: 767px) {
+        top: 40% !important;
+      }
+      &::before {
+        content: url(#{$imgPath}right-gal.png) !important;
+      }
+    }
+    &__arrow-left {
+      left: 0;
+      @media all and (max-width: 767px) {
+        top: 40% !important;
+      }
+      &::before {
+        content: url(#{$imgPath}left-gal.png) !important;
+      }
+    }
+  }
+}

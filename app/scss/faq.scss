@@ -1,0 +1,95 @@
+@import "_vars";
+
+.faq {
+  padding: 50px 0;
+  .wrapper {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  &__question {
+    flex: 0 0 65%;
+    padding: 0 15px;
+    @media all and (max-width: 1023px) {
+      flex: 0 0 55%;
+    }
+    @media all and (max-width: 767px) {
+      flex: 0 0 100%;
+      padding: 0;
+    }
+  }
+  &__form {
+    flex: 0 0 35%;
+    padding: 0 15px 0 40px;
+    @media all and (max-width: 1023px) {
+      flex: 0 0 45%;
+    }
+    @media all and (max-width: 767px) {
+      flex: 0 0 100%;
+      padding: 0;
+    }
+  }
+  &__desc {
+    font: 300 14px/24px $font;
+    padding: 15px;
+    display: none;
+  }
+  &__title {
+    position: relative;
+    font: bold 14px/30px $font;
+    text-transform: uppercase;
+    overflow: hidden;
+    padding-bottom: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 15px;
+  }
+  &__button {
+    width: 28px;
+    height: 28px;
+    padding: 7px 0;
+    flex: 0 0 28px;
+    &::before {
+      content: url(#{$imgPath}down.png)
+    }
+    &--open {
+      background: $green;
+      &::before {
+        content: url(#{$imgPath}up.png)
+      }
+    }
+  }
+  &__item {
+    border-bottom: 1px solid $lightGrey;
+  }
+  &__form {
+    form {
+      background-image: url(#{$imgPath}faq-form.jpg);
+      padding: 30px;
+      color: #fff;
+    }
+    &-title {
+      font: bold 15px/30px $font;
+      text-align: center;
+      color: $orange;
+      text-transform: uppercase;
+    }
+    &-desc {
+      font: 500 15px/24px $font;
+      text-align: center;
+      margin-top: 15px;
+    }
+  }
+  &__input {
+    width: 100%;
+    background: none;
+    color: #fff;
+    &::placeholder {
+      color: #fff;
+    }
+  }
+  &__submit {
+    width: 100%;
+    margin-top: 0;
+  }
+}

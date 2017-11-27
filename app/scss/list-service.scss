@@ -1,0 +1,29 @@
+@import '_vars';
+
+.list-service {
+  background: $grey;
+  color: #fff;
+  padding: 50px 0 50px;
+  .wrapper {
+    display: flex;
+    justify-content: flex-start;
+    @media all and (max-width: 1023px) {
+      flex-wrap: wrap;
+    }
+  }
+  &__item {
+    padding: 15px;
+    @media all and (max-width: 767px) {
+      flex: 1 0 50%;
+    }
+  }
+  &__title {
+    display: block;
+    font: 500 15px/26px $font;
+    margin-top: 20px;
+    span {
+      font-weight: 400;
+      display: block;
+    }
+  }
+}

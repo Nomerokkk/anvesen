@@ -1,0 +1,121 @@
+.banner {
+  color: #fff;
+  background: url(../img/banner.jpg);
+  overflow: hidden;
+  text-align: center;
+  position: relative;
+  -webkit-background-size: cover;
+  background-size: cover;
+}
+
+.banner .wrapper {
+  padding: 100px 0;
+}
+
+@media all and (max-width: 767px) {
+  .banner .wrapper {
+    padding: 30px 0;
+  }
+}
+
+.banner__item {
+  -webkit-background-size: cover;
+          background-size: cover;
+}
+
+.banner--slider {
+  background: none;
+}
+
+.banner--slider .slick-dots {
+  position: absolute;
+  bottom: 50px;
+  text-align: center;
+  width: 100%;
+}
+
+@media all and (max-width: 767px) {
+  .banner--slider .slick-dots {
+    bottom: 20px;
+  }
+}
+
+.banner--slider .slick-dots li {
+  display: inline-block;
+}
+
+.banner--slider .slick-dots li button {
+  display: none;
+}
+
+.banner--slider .slick-dots li:before {
+  content: '';
+  width: 16px;
+  height: 16px;
+  border: 1px solid #fff;
+  background: transparent;
+  display: block;
+  margin: 10px;
+  cursor: pointer;
+}
+
+.banner--slider .slick-dots li.slick-active:before {
+  background: rgba(225, 225, 225, 0.5);
+}
+
+.banner__title {
+  text-transform: uppercase;
+  font: 400 40px/1.5 "Roboto", sans-serif;
+}
+
+@media all and (max-width: 767px) {
+  .banner__title {
+    font-size: 24px;
+  }
+}
+
+.banner__desc {
+  line-height: 2.5;
+  max-width: 700px;
+  margin: 0 auto 50px;
+}
+
+@media all and (max-width: 767px) {
+  .banner__desc {
+    line-height: 1.4;
+  }
+}
+
+.banner__btns {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: stretch;
+  -webkit-align-items: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: 50px;
+}
+
+@media all and (max-width: 767px) {
+  .banner__btns {
+    -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+  }
+}
+
+.banner__button {
+  margin: 0 15px;
+}
+
+@media all and (max-width: 767px) {
+  .banner__button {
+    margin-bottom: 15px;
+  }
+}

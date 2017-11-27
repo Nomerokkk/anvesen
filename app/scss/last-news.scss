@@ -1,0 +1,79 @@
+@import '_vars';
+
+.last-news {
+  background: $lightGrey;
+  padding: 50px 0;
+  text-align: center;
+  &__wrapper {
+    display: flex;
+    width: 100%;
+    @media all and (max-width: 767px) {
+      padding: 0 30px;
+    }
+  }
+  &__item {
+    flex: 1 0 33.3333%;
+    padding: 0 15px;
+  }
+  &__read-all {
+    margin-top: 30px;
+  }
+  .arrows__next {
+    right: -10px;
+  }
+  .arrows__prev {
+    left: -10px;
+  }
+}
+
+.news-item {
+  background: #fff;
+  text-align: center;
+  padding-bottom: 30px;
+  a {
+    display: block;
+  }
+  img {
+    max-width: 100%;
+    width: 100%;
+  }
+  &__cat {
+    color: $orange;
+    font-size: 14px;
+    font-weight: 300;
+    margin: 20px 0;
+  }
+  &__title {
+    font-weight: bold;
+    margin-bottom: 40px;
+  }
+  &__nav {
+    display: flex;
+    font-size: 14px;
+    font-weight: 300;
+    justify-content: space-between;
+    padding: 0 30px;
+    @media all and (max-width: 767px) {
+      padding: 0;
+    }
+  }
+}
+
+.comment {
+    &::before {
+      content: url(#{$imgPath}comment.png);
+      margin-right: 5px;
+    }
+}
+.calendar {
+  &::before {
+    content: url(#{$imgPath}calendar.png);
+    margin-right: 5px;
+  }
+}
+.view {
+  &::before {
+    content: url(#{$imgPath}eye.png);
+    margin-right: 5px;
+  }
+}

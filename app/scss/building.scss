@@ -1,0 +1,45 @@
+@import '_vars';
+
+.building {
+  .our-work,
+  .anvessen-this {
+    background-color: $lightGrey;
+  }
+}
+.get-home {
+  padding: 50px 0;
+  -webkit-background-size: cover;
+  background-size: cover;
+  background-image: url(#{$imgPath}get-home.jpg);
+  text-align: center;
+  color: #fff;
+  .wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  &__title {
+    font-size: 30px;
+    text-transform: uppercase;
+    flex: 1 0 100%;
+    @media all and (max-width: 767px) {
+      font-size: 24px;
+    }
+  }
+  &__desc {
+    font-size: 18px;
+    font-weight: 300;
+    flex: 1 0 100%;
+    margin: 20px 0;
+  }
+  &__number {
+    font-size: 30px;
+    flex: 1 0 100%;
+  }
+  &__call-us {
+    flex: 1 0 100%;
+    margin: 20px 0;
+    font-size: 18px;
+    font-weight: 300;
+  }
+}
